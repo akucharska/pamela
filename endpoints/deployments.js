@@ -10,7 +10,7 @@ const resourceType = { kind: "Deployment", apiVersion: "apps/v1" };
 
 export default function createDeploymentEndpoints(kubeconfig, app) {
   const serverAddress = kubeconfig.getCurrentCluster().server;
-
+  console.log('test')
   createGenericListEndpoint(kubeconfig, app)(
     "/apis/apps/v1/namespaces/:namespace/deployments",
     `${serverAddress}/apis/apps/v1/namespaces/{namespace}/deployments`,
